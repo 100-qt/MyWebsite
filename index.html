@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rome Kyron L. Sabado — Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Rome Kyron Sabado</div>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <span class="eyebrow">Welcome to my portfolio</span>
+    <h1>Hi, I'm <span class="underline">Rome Kyron Sabado</span></h1>
+    <p>Curious, driven, and always up for trying something new. This page is where I share a bit about who I am, what I enjoy doing, and how to reach me.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#about">About Me</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <span class="about-label">01 — About</span>
+    <div class="about-body">
+      <p>I am the <mark>second child</mark> in my family and have an older brother. I enjoy challenging myself by trying new things, exploring different ideas, and learning skills outside of my usual routine. I am naturally curious and always eager to discover new opportunities that help me grow both personally and academically.</p>
+      <p>Outside of school, I enjoy playing online games, especially games with trading systems and player-driven economies. I like analyzing item values, monitoring market trends, and making strategic trading and investment decisions to maximize the value of my virtual assets. These games have helped me develop skills in critical thinking, problem-solving, planning, and decision-making.</p>
+    </div>
+  </div>
+</section>
+
+<section id="hobbies">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2>Hobbies</h2>
+      <span class="eyebrow">Outside of school</span>
+    </div>
+    <p class="hover-hint">Tip: hover a card (or tap on mobile) to see photos</p>
+    <div class="project-grid">
+      <div class="card" onclick="this.classList.toggle('show-thumbs')">
+        <span class="tag">Gaming</span>
+        <h3>Playing</h3>
+        <p>Playing online games with player-driven economies and trading systems, such as Growtopia, where I enjoy analyzing item values, trading, and making strategic investment decisions. I also enjoy playing FPS games, such as Valorant.</p>
+        <div class="thumbs">
+          <img src="gt.jpg" alt="Growtopia" onclick="event.stopPropagation(); openLightbox(this.src, 'Growtopia')">
+          <img src="Valorant.jpg" alt="ValorantLob" onclick="event.stopPropagation(); openLightbox(this.src, 'Valorant')">
+          <img src="Valo.jpg" alt="Valorant" onclick="event.stopPropagation(); openLightbox(this.src, 'Valorant')">
+        </div>
+      </div>
+      <div class="card" onclick="this.classList.toggle('show-thumbs')">
+        <span class="tag">Online Trading</span>
+        <h3>Trading (Buy and Sell)</h3>
+        <p>Buying and selling online currency and virtual items to earn extra income for daily expenses through online trading and play-to-earn games. This has become part of my daily routine while helping me develop skills in trading, financial decision-making, and online transactions.</p>
+        <div class="thumbs">
+          <img src="money.jpg" alt="Earnings" onclick="event.stopPropagation(); openLightbox(this.src, 'Back when my monthly income was ₱30K–₱50K. Not to brag, but to inspire.')">
+        </div>
+      </div>
+      <div class="card" onclick="this.classList.toggle('show-thumbs')">
+        <span class="tag">Content</span>
+        <h3>Streaming</h3>
+        <p>Creating live content, interacting with viewers, and building an engaging community while improving my communication, creativity, and time management skills.</p>
+        <div class="thumbs">
+          <img src="pc.jpg" alt="Pc setup" onclick="event.stopPropagation(); openLightbox(this.src, 'Pc setup')">
+          <img src="A100.png" alt="Tiktok" onclick="event.stopPropagation(); openLightbox(this.src, 'Tiktok')">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <span class="eyebrow">Contact</span>
+    <h2>Get in Touch</h2>
+    <p>
+      Thank you for visiting my portfolio. If you would like to know more
+      about me or discuss opportunities, feel free to contact me via email at
+      <strong>Sabadoromekyron@gmail.com</strong>.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © Rome Kyron Sabado. Mahal ko na po siya
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+  <span class="lightbox-caption" id="lightbox-caption"></span>
+</div>
+
+<script>
+  function openLightbox(src, caption){
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-caption').textContent = caption || '';
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox(){
+    document.getElementById('lightbox').classList.remove('open');
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+</body>
+</html>
