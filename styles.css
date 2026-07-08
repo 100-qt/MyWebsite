@@ -112,7 +112,7 @@ nav{
   margin:0 auto;
 }
 
-.hero .eyebrow{ margin-bottom:18px; display:block; }
+.hero .eyebrow{ display:block; margin-bottom:6px; }
 
 .hero h1{
   font-size:clamp(40px, 7vw, 68px);
@@ -123,6 +123,13 @@ nav{
 .hero h1 .underline{
   position:relative;
   white-space:nowrap;
+  color:var(--accent);
+}
+
+.hero-subtitle{
+  margin-top:10px;
+  font-size:18px;
+  font-weight:600;
   color:var(--accent);
 }
 
@@ -211,11 +218,33 @@ section{
   padding-left:28px;
 }
 
+.about-side{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
 .about-label{
   font-family:'Courier New', monospace;
   font-size:12px;
   color:var(--muted);
   padding-top:6px;
+}
+
+.about-photo{
+  width:100%;
+  aspect-ratio:1 / 1;
+  border-radius:8px;
+  overflow:hidden;
+  background:var(--card);
+  border:1px solid var(--line);
+}
+
+.about-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
 .about-body p{
@@ -229,6 +258,48 @@ section{
   background:none;
   color:var(--ink);
   border-bottom:2px solid var(--accent);
+}
+
+.info-card{
+  margin-top:24px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:26px 28px;
+  position:relative;
+}
+
+.info-card h3{
+  font-size:19px;
+  margin-bottom:16px;
+}
+
+.info-row{
+  display:flex;
+  gap:8px;
+  padding:10px 0;
+  border-bottom:1px solid var(--line);
+  font-size:15px;
+}
+
+.info-row:last-of-type{
+  border-bottom:none;
+}
+
+.info-label{
+  font-weight:600;
+  color:var(--ink);
+  flex-shrink:0;
+}
+
+.info-value{
+  color:var(--muted);
+}
+
+.info-secret{
+  font-size:11px;
+  color:var(--line);
+  font-style:italic;
 }
 
 
@@ -309,6 +380,38 @@ section{
 }
 
 
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+  gap:20px;
+}
+
+.skill-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:20px;
+  text-align:center;
+  transition:border-color 0.18s ease, transform 0.15s ease;
+}
+
+.skill-card:hover{
+  border-color:var(--accent);
+  transform:translateY(-2px);
+}
+
+.skill-card h3{
+  font-size:17px;
+  margin-bottom:10px;
+}
+
+.stars{
+  color:var(--accent);
+  font-size:20px;
+  letter-spacing:2px;
+}
+
+
 .contact{
   background:var(--ink);
   color:var(--paper);
@@ -337,6 +440,27 @@ section{
 
 .contact strong{
   color:var(--paper);
+}
+
+.contact-links{
+  margin-top:24px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.contact-links a{
+  color:var(--paper);
+  font-size:14px;
+  font-weight:600;
+  border-bottom:1px solid var(--accent);
+  padding-bottom:2px;
+  transition:color 0.15s ease;
+}
+
+.contact-links a:hover{
+  color:var(--accent);
 }
 
 footer{
